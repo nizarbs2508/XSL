@@ -1,0 +1,30 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:urn="urn:ir:se_ar_creereprescr" xmlns:urn1="urn:ir:ar_creereprescr">
+   <soap:Header/>
+   <soap:Body>
+      <urn:SE_ARCREEREPRESCR>
+         <!--Zero or more repetitions:EF_EP4_S501-->
+         <urn1:ARCREEREPRESCR>
+            <!--Optional:EF_EP4_S501.01-->
+            <urn1:Horodatage>?</urn1:Horodatage>
+            <!--Optional:Balise non utilisée-->
+            <urn1:EmpreinteAR>?</urn1:EmpreinteAR>
+            <!--Optional:EF_EP4_S502-->
+            <urn1:PRESCRIPTION>
+               <!--Optional:EF_EP4_S502.01-->
+               <urn1:Numero>?</urn1:Numero>
+               <!--Optional:EF_EP4_S502.02-->
+               <urn1:Type>?</urn1:Type>
+            </urn1:PRESCRIPTION>
+            <!--Zero or more repetitions:EF_EP4_S599-->
+            <urn1:ERREUR>
+               <!--Optional:EF_EP4_S599.01-->
+               <urn1:Code>?</urn1:Code>
+               <!--Optional:EF_EP4_S599.02-->
+               <urn1:Severite>?</urn1:Severite>
+               <!--Optional:EF_EP4_S599.03-->
+               <urn1:Libelle>?</urn1:Libelle>
+            </urn1:ERREUR>
+         </urn1:ARCREEREPRESCR>
+      </urn:SE_ARCREEREPRESCR>
+   </soap:Body>
+</soap:Envelope>
