@@ -1,0 +1,49 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:add="http://www.w3.org/2005/08/addressing" xmlns:urn="urn:siram:lps:ctxlps" xmlns:oas="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:urn1="urn:ir:se_recheprescr" xmlns:urn2="urn:ir:recheprescr">
+   <soap:Header/>
+   <soap:Body>
+      <urn1:SE_RECHEPRESCR>
+         <!--Optional:EF_EP2_E301.01-->
+         <urn2:Horodatage>?</urn2:Horodatage>
+         <!--Optional:EF_EP2_E301.04-->
+         <urn2:TypePrescription>?</urn2:TypePrescription>
+         <!--Optional:EF_EP2_E301.05-->
+         <urn2:SousType>?</urn2:SousType>
+         <!--Optional:EF_EP2_E301.02-->
+         <urn2:DatePrescriptionDebut>?</urn2:DatePrescriptionDebut>
+         <!--Optional:EF_EP2_E301.03-->
+         <urn2:DatePrescriptionFin>?</urn2:DatePrescriptionFin>
+         <!--Optional:EF_EP2_E301.07-->
+         <urn2:DateExecutionDebut>?</urn2:DateExecutionDebut>
+         <!--Optional:EF_EP2_E301.08-->
+         <urn2:DateExecutionFin>?</urn2:DateExecutionFin>
+         <!--Optional:EF_EP2_E301.09-->
+         <urn2:DateModificationDebut>?</urn2:DateModificationDebut>
+         <!--Optional:EF_EP2_E301.10-->
+         <urn2:DateModificationFin>?</urn2:DateModificationFin>
+         <!--Optional:EF_EP2_E301.11-->
+         <urn2:NumNIROD>?</urn2:NumNIROD>
+         <!--Optional:EF_EP2_E301.12-->
+         <urn2:NumNIR>?</urn2:NumNIR>
+         <!--Optional:EF_EP2_E301.13-->
+         <urn2:DateNai>?</urn2:DateNai>
+         <!--Optional:EF_EP2_E301.14-->
+         <urn2:Rang>?</urn2:Rang>
+         <!--Optional:EF_EP2_E301.18-->
+         <urn2:MatriculeINS>?</urn2:MatriculeINS>
+         <!--Optional:EF_EP2_E301.19-->
+         <urn2:DateNaiINS>?</urn2:DateNaiINS>
+         <!--Optional:-->
+         <urn2:PRESCRIPTEUR>
+            <!--Optional:EF_EP2_E301.15-->
+            <urn2:Identifiant R="?">?</urn2:Identifiant>
+            <!--Optional:EF_EP2_E301.16-->
+            <urn2:IdentifiantRPPS>?</urn2:IdentifiantRPPS>
+            <!--Optional:-->
+            <urn2:STS>
+               <!--Optional:EF_EP2_E301.17-->
+               <urn2:Identifiant R="?">?</urn2:Identifiant>
+            </urn2:STS>
+         </urn2:PRESCRIPTEUR>
+      </urn1:SE_RECHEPRESCR>
+   </soap:Body>
+</soap:Envelope>

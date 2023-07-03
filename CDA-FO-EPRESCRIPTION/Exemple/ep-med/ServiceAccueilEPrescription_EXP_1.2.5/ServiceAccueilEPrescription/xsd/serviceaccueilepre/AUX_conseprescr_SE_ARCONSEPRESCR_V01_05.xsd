@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:ar_conseprescr="urn:ir:ar_conseprescr" 
+    attributeFormDefault="unqualified" 
+    elementFormDefault="qualified" 
+    targetNamespace="urn:ir:ar_conseprescr"
+    xmlns:e_prescr_inf="urn:ir:e_prescr_inf"
+    xmlns:e_prescr_inf_modif="urn:ir:e_prescr_inf_modif"
+    xmlns:e_prescr_inf_exec="urn:ir:e_prescr_inf_exec">
+    
+    <xsd:annotation>
+        <xsd:appinfo>
+            <Build xmlns="urn:camelia:info" Generation="3" Host="P107501A239573S" Location="D:/IBM/rationalsdp7.0.5/workspace" Model="CONTENUPRESCRIPTION" Project="P2" Repository="X:\SRVDAIT\Patrimoine" Root="false" Time="20180424_130320" />
+            <Package xmlns="urn:camelia:info" Status="Approved" Timestamp="20180424_130321" Version="01.00" />
+        </xsd:appinfo>
+    </xsd:annotation>  
+    
+    <xsd:import namespace="urn:ir:e_prescr_inf" schemaLocation="AUX_conseprescr_INFO_PRESCRIPTION_V01_04.xsd" />
+    <xsd:import namespace="urn:ir:e_prescr_inf_modif" schemaLocation="AUX_conseprescr_INFO_MODIFICATION_V01_04.xsd" />
+    <xsd:import namespace="urn:ir:e_prescr_inf_exec" schemaLocation="AUX_conseprescr_INFO_EXECUTION_V01_05.xsd" />
+    
+    <xsd:complexType name="SE_ARCONSEPRESCR_SE_ARCONSEPRESCR">
+        <xsd:sequence>
+        	<xsd:element name="Horodatage" type="xsd:dateTime"
+                maxOccurs="1" minOccurs="0">
+            </xsd:element>
+            <xsd:element name="INFOPRESCRIPTION"
+                type="e_prescr_inf:INFOPRESCRIPTION_SE_ARCONSEPRESCR" maxOccurs="1"
+                minOccurs="0">
+            </xsd:element>
+            <xsd:element name="INFOMODIFICATION"
+                type="e_prescr_inf_modif:INFOMODIFICATION_SE_ARCONSEPRESCR_INF_MODIF" maxOccurs="unbounded"
+                minOccurs="0">
+            </xsd:element>
+            <xsd:element name="INFOEXECUTION" type="e_prescr_inf_exec:INFOEXECUTION_SE_ARCONSEPRESCR_INF_EXEC" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+            <xsd:element name="ERREUR" type="ar_conseprescr:ERREUR_SE_ARCONSEPRESCR"
+                maxOccurs="unbounded" minOccurs="0">
+            </xsd:element>
+            
+            
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    
+    <xsd:complexType name="ERREUR_SE_ARCONSEPRESCR">
+        <xsd:sequence>
+            <xsd:element name="Code" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="Severite" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="Libelle" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+   
+</xsd:schema>

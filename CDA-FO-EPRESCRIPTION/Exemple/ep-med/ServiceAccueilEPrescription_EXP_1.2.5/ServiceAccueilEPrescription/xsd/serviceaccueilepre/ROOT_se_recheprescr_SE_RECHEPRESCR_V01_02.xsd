@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:se_recheprescr="urn:ir:se_recheprescr"
+    xmlns:recheprescr="urn:ir:recheprescr"
+    attributeFormDefault="unqualified" elementFormDefault="qualified" 
+    targetNamespace="urn:ir:se_recheprescr"
+    >
+    
+    <xsd:annotation>
+        <xsd:appinfo>
+            <Build xmlns="urn:camelia:info" Generation="3" Host="P107501A239573S" Location="D:/IBM/rationalsdp7.0.5/workspace" Model="SE_RECHEPRESCR" Project="P2" Repository="X:\SRVDAIT\Patrimoine" Root="false" Time="20180424_130320" />
+            <Package xmlns="urn:camelia:info" Status="Approved" Timestamp="20180424_130321" Version="01.00" />
+        </xsd:appinfo>
+    </xsd:annotation>  
+    
+    <xsd:import namespace="urn:ir:recheprescr" schemaLocation="AUX_recheprescr_SE_RECHEPRESCR_V01_02.xsd"/>
+    <xsd:element name="SE_RECHEPRESCR"
+        type="recheprescr:SE_RECHEPRESCR_SE_RECHEPRESCR">
+    </xsd:element>
+    
+</xsd:schema>

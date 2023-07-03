@@ -1,0 +1,722 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:urn="urn:ir:se_ar_conseprescr" xmlns:urn1="urn:ir:ar_conseprescr" xmlns:urn2="urn:ir:e_prescr_inf" xmlns:urn3="urn:ir:e_prescr_inf_modif" xmlns:urn4="urn:ir:e_prescr_inf_exec">
+   <soap:Header/>
+   <soap:Body>
+      <urn:SE_ARCONSEPRESCR>
+         <!--Optional:EF_EP3_S304.01-->
+         <urn1:Horodatage>?</urn1:Horodatage>
+         <!--Optional:EF_EP3_S401-->
+         <urn1:INFOPRESCRIPTION>
+            <!--Optional:EF_EP3_S401.01-->
+            <urn2:VersionNorme>?</urn2:VersionNorme>
+            <!--Optional:EF_EP3_S403-->
+            <urn2:PRESCRIPTION>
+               <!--Optional:EF_EP3_S403.02-->
+               <urn2:Numero>?</urn2:Numero>
+               <!--Optional:EF_EP3_S403.01-->
+               <urn2:Date>?</urn2:Date>
+               <!--Optional:EF_EP3_S403.04-->
+               <urn2:Type>?</urn2:Type>
+               <!--Optional:EF_EP3_S403.05-->
+               <urn2:NbLignes>?</urn2:NbLignes>
+               <!--Optional:EF_EP3_S403.06-->
+               <urn2:Consentement>?</urn2:Consentement>
+               <!--Optional:EF_EP3_S403.07-->
+               <urn2:Domicile>?</urn2:Domicile>
+               <!--Optional:EF_EP3_S403.08-->
+               <urn2:Urgence>?</urn2:Urgence>
+               <!--Optional:EF_EP3_S403.10-->
+               <urn2:Militaire>?</urn2:Militaire>
+               <!--Optional:EF_EP3_S403.11-->
+               <urn2:DateHeureSouhaiteeActe>?</urn2:DateHeureSouhaiteeActe>
+               <!--Optional:EF_EP3_S403.09-->
+               <urn2:SousType>?</urn2:SousType>
+               <!--Optional:EF_EP3_S413-->
+               <urn2:CONTENUPRESCRIPTION>
+                  <!--Zero or more repetitions:EF_EP3_S406-->
+                  <urn2:LIGMEDICAMENTEUX>
+                     <!--Optional:EF_EP3_S406.01-->
+                     <urn2:NumLigne>?</urn2:NumLigne>
+                     <!--Optional:EF_EP3_S406.02-->
+                     <urn2:TypeEltPrescrit>?</urn2:TypeEltPrescrit>
+                     <!--Optional:EF_EP3_S406.05-->
+                     <urn2:NbConditionnement>?</urn2:NbConditionnement>
+                     <!--Optional:EF_EP3_S406.06-->
+                     <urn2:NbRenouv>?</urn2:NbRenouv>
+                     <!--Optional:EF_EP3_S406.09-->
+                     <urn2:EstEnRapportALD>?</urn2:EstEnRapportALD>
+                     <!--Optional:EF_EP3_S406.10-->
+                     <urn2:EstEnRapportAccident>?</urn2:EstEnRapportAccident>
+                     <!--Optional:EF_EP3_S406.15-->
+                     <urn2:EstEnRapportPrev>?</urn2:EstEnRapportPrev>
+                     <!--Optional:EF_EP3_S406.03-->
+                     <urn2:CIP>?</urn2:CIP>
+                     <!--Optional:EF_EP3_S406.14-->
+                     <urn2:IDMVN>?</urn2:IDMVN>
+                     <!--Optional:EF_EP3_S406.16-->
+                     <urn2:Medicabase>?</urn2:Medicabase>
+                     <!--Optional:EF_EP3_S406.17-->
+                     <urn2:Specialite>?</urn2:Specialite>
+                     <!--Optional:EF_EP3_S406.04-->
+                     <urn2:Molecules>?</urn2:Molecules>
+                     <!--Optional:EF_EP3_S406.07-->
+                     <urn2:Duree>?</urn2:Duree>
+                     <!--Optional:EF_EP3_S406.08-->
+                     <urn2:Posologie>?</urn2:Posologie>
+                     <!--Optional:EF_EP3_S406.13-->
+                     <urn2:EstNonRemb>?</urn2:EstNonRemb>
+                     <!--Optional:EF_EP3_S406.11-->
+                     <urn2:EstNonSub>?</urn2:EstNonSub>
+                     <!--Optional:EF_EP3_S406.18-->
+                     <urn2:MotifNonSub>?</urn2:MotifNonSub>
+                     <!--Optional:EF_EP3_S406.12-->
+                     <urn2:EstHorsAMM>?</urn2:EstHorsAMM>
+                     <!--Optional:EF_EP3_S406.19-->
+                     <urn2:TrtAntiBio>?</urn2:TrtAntiBio>
+                     <!--Optional:EF_EP3_S406.20-->
+                     <urn2:RTU>?</urn2:RTU>
+                     <!--Optional:EF_EP3_S406.21-->
+                     <urn2:CommentairePM>?</urn2:CommentairePM>
+                  </urn2:LIGMEDICAMENTEUX>
+                  <!--Zero or more repetitions:EF_EP3_S407-->
+                  <urn2:LIGDISPOSITIFMEDICAL>
+                     <!--Optional:EF_EP3_S407.01-->
+                     <urn2:NumLigne>?</urn2:NumLigne>
+                     <!--Optional:EF_EP3_S407.04-->
+                     <urn2:NbConditionnement>?</urn2:NbConditionnement>
+                     <!--Optional:EF_EP3_S407.10-->
+                     <urn2:DureeLocationLPP>?</urn2:DureeLocationLPP>
+                     <!--Optional:EF_EP3_S407.05-->
+                     <urn2:NbRenouv>?</urn2:NbRenouv>
+                     <!--Optional:EF_EP3_S407.06-->
+                     <urn2:EstEnRapportALD>?</urn2:EstEnRapportALD>
+                     <!--Optional:EF_EP3_S407.07-->
+                     <urn2:EstEnRapportAccident>?</urn2:EstEnRapportAccident>
+                     <!--Optional:EF_EP3_S407.11-->
+                     <urn2:EstEnRapportPrev>?</urn2:EstEnRapportPrev>
+                     <!--Optional:EF_EP3_S407.08-->
+                     <urn2:EstNonRemb>?</urn2:EstNonRemb>
+                     <!--Optional:EF_EP3_S407.03-->
+                     <urn2:CodeLPP>?</urn2:CodeLPP>
+                     <!--Optional:EF_EP3_S407.09-->
+                     <urn2:CodeACL>?</urn2:CodeACL>
+                     <!--Optional:EF_EP3_S407.17-->
+                     <urn2:CodeIndexACL7>?</urn2:CodeIndexACL7>
+                     <!--Optional:EF_EP3_S407.12-->
+                     <urn2:CodeREF13>?</urn2:CodeREF13>
+                     <!--Optional:EF_EP3_S407.13-->
+                     <urn2:CodeUDI>?</urn2:CodeUDI>
+                     <!--Optional:EF_EP3_S407.15-->
+                     <urn2:LibelleLPPLibre>?</urn2:LibelleLPPLibre>
+                     <!--Optional:EF_EP3_S407.14-->
+                     <urn2:LibelleMarque>?</urn2:LibelleMarque>
+                  </urn2:LIGDISPOSITIFMEDICAL>
+                  <!--Zero or more repetitions:EF_EP3_S408-->
+                  <urn2:LIGKINE>
+                     <!--Optional:EF_EP3_S408.01-->
+                     <urn2:NumLigne>?</urn2:NumLigne>
+                     <!--Optional:EF_EP3_S408.02-->
+                     <urn2:Detail>?</urn2:Detail>
+                     <!--Optional:EF_EP3_S408.03-->
+                     <urn2:EstEnRapportALD>?</urn2:EstEnRapportALD>
+                     <!--Optional:EF_EP3_S408.04-->
+                     <urn2:EstEnRapportAccident>?</urn2:EstEnRapportAccident>
+                     <!--Optional:EF_EP3_S408.05-->
+                     <urn2:EstEnRapportPrev>?</urn2:EstEnRapportPrev>
+                     <!--Optional:EF_EP3_S408.06-->
+                     <urn2:EstNonRemb>?</urn2:EstNonRemb>
+                     <!--Optional:EF_EP3_S408.07-->
+                     <urn2:EstHN>?</urn2:EstHN>
+                  </urn2:LIGKINE>
+                  <!--Zero or more repetitions:EF_EP3_S409-->
+                  <urn2:LIGBIO>
+                     <!--Optional:Balise non utilisée-->
+                     <urn2:LOINCBIO>
+                        <!--Optional:Balise non utilisée-->
+                        <urn2:CodeNABM>?</urn2:CodeNABM>
+                        <!--Optional:Balise non utilisée-->
+                        <urn2:Libelle>?</urn2:Libelle>
+                        <!--Optional:Balise non utilisée-->
+                        <urn2:Synonyme>?</urn2:Synonyme>
+                        <!--Optional:Balise non utilisée-->
+                        <urn2:Code>?</urn2:Code>
+                        <!--Optional:Balise non utilisée-->
+                        <urn2:LibelleReference>?</urn2:LibelleReference>
+                        <!--Optional:Balise non utilisée-->
+                        <urn2:Order>?</urn2:Order>
+                        <!--Optional:Balise non utilisée-->
+                        <urn2:Nature>?</urn2:Nature>
+                        <!--Optional:Balise non utilisée-->
+                        <urn2:Localisation>?</urn2:Localisation>
+                        <!--Optional:Balise non utilisée-->
+                        <urn2:Associe>?</urn2:Associe>
+                        <!--Optional:Balise non utilisée-->
+                        <urn2:Valeurs>?</urn2:Valeurs>
+                        <!--Optional:Balise non utilisée-->
+                        <urn2:DateValidation>?</urn2:DateValidation>
+                        <!--Optional:Balise non utilisée-->
+                        <urn2:VersionVP>?</urn2:VersionVP>
+                        <!--Optional:Balise non utilisée-->
+                        <urn2:Statut>?</urn2:Statut>
+                     </urn2:LOINCBIO>
+                     <!--Optional:EF_EP3_S409.01-->
+                     <urn2:NumLigne>?</urn2:NumLigne>
+                     <!--Optional:EF_EP3_S409.02-->
+                     <urn2:Detail>?</urn2:Detail>
+                     <!--Optional:EF_EP3_S409.03-->
+                     <urn2:NbRenouv>?</urn2:NbRenouv>
+                     <!--Optional:EF_EP3_S409.23-->
+                     <urn2:FreqRenouv>?</urn2:FreqRenouv>
+                     <!--Optional:EF_EP3_S409.24-->
+                     <urn2:AJeun>?</urn2:AJeun>
+                     <!--Optional:EF_EP3_S409.04-->
+                     <urn2:EstEnRapportALD>?</urn2:EstEnRapportALD>
+                     <!--Optional:EF_EP3_S409.05-->
+                     <urn2:EstEnRapportAccident>?</urn2:EstEnRapportAccident>
+                     <!--Optional:EF_EP3_S409.06-->
+                     <urn2:EstEnRapportPrev>?</urn2:EstEnRapportPrev>
+                     <!--Optional:EF_EP3_S409.07-->
+                     <urn2:EstNonRemb>?</urn2:EstNonRemb>
+                     <!--Optional:EF_EP3_S409.08-->
+                     <urn2:EstHN>?</urn2:EstHN>
+                  </urn2:LIGBIO>
+                  <!--Zero or more repetitions:EF_EP3_S410-->
+                  <urn2:LIGINFIRMIER>
+                     <!--Optional:EF_EP3_S410.01-->
+                     <urn2:NumLigne>?</urn2:NumLigne>
+                     <!--Optional:EF_EP3_S410.02-->
+                     <urn2:Detail>?</urn2:Detail>
+                     <!--Optional:EF_EP3_S410.03-->
+                     <urn2:EstEnRapportALD>?</urn2:EstEnRapportALD>
+                     <!--Optional:EF_EP3_S410.04-->
+                     <urn2:EstEnRapportAccident>?</urn2:EstEnRapportAccident>
+                     <!--Optional:EF_EP3_S410.05-->
+                     <urn2:EstEnRapportPrev>?</urn2:EstEnRapportPrev>
+                     <!--Optional:EF_EP3_S410.06-->
+                     <urn2:EstNonRemb>?</urn2:EstNonRemb>
+                     <!--Optional:EF_EP3_S410.07-->
+                     <urn2:EstHN>?</urn2:EstHN>
+                  </urn2:LIGINFIRMIER>
+                  <!--Zero or more repetitions:EF_EP3_S411-->
+                  <urn2:LIGPEDICURE>
+                     <!--Optional:EF_EP3_S411.01-->
+                     <urn2:NumLigne>?</urn2:NumLigne>
+                     <!--Optional:EF_EP3_S411.02-->
+                     <urn2:Detail>?</urn2:Detail>
+                     <!--Optional:EF_EP3_S411.03-->
+                     <urn2:EstEnRapportALD>?</urn2:EstEnRapportALD>
+                     <!--Optional:EF_EP3_S411.04-->
+                     <urn2:EstEnRapportAccident>?</urn2:EstEnRapportAccident>
+                     <!--Optional:EF_EP3_S411.05-->
+                     <urn2:EstEnRapportPrev>?</urn2:EstEnRapportPrev>
+                     <!--Optional:EF_EP3_S411.06-->
+                     <urn2:EstNonRemb>?</urn2:EstNonRemb>
+                     <!--Optional:EF_EP3_S411.07-->
+                     <urn2:EstHN>?</urn2:EstHN>
+                  </urn2:LIGPEDICURE>
+                  <!--Zero or more repetitions:EF_EP3_S412-->
+                  <urn2:LIGORTHOPHONISTE>
+                     <!--Optional:EF_EP3_S412.01-->
+                     <urn2:NumLigne>?</urn2:NumLigne>
+                     <!--Optional:EF_EP3_S412.02-->
+                     <urn2:Detail>?</urn2:Detail>
+                     <!--Optional:EF_EP3_S412.03-->
+                     <urn2:EstEnRapportALD>?</urn2:EstEnRapportALD>
+                     <!--Optional:EF_EP3_S412.04-->
+                     <urn2:EstEnRapportAccident>?</urn2:EstEnRapportAccident>
+                     <!--Optional:EF_EP3_S412.05-->
+                     <urn2:EstEnRapportPrev>?</urn2:EstEnRapportPrev>
+                     <!--Optional:EF_EP3_S412.06-->
+                     <urn2:EstNonRemb>?</urn2:EstNonRemb>
+                     <!--Optional:EF_EP3_S412.07-->
+                     <urn2:EstHN>?</urn2:EstHN>
+                  </urn2:LIGORTHOPHONISTE>
+                  <!--Zero or more repetitions:EF_EP3_S414-->
+                  <urn2:LIGORTHOPTISTE>
+                     <!--Optional:EF_EP3_S414.01-->
+                     <urn2:NumLigne>?</urn2:NumLigne>
+                     <!--Optional:EF_EP3_S414.02-->
+                     <urn2:Detail>?</urn2:Detail>
+                     <!--Optional:EF_EP3_S414.03-->
+                     <urn2:EstEnRapportALD>?</urn2:EstEnRapportALD>
+                     <!--Optional:EF_EP3_S414.04-->
+                     <urn2:EstEnRapportAccident>?</urn2:EstEnRapportAccident>
+                     <!--Optional:EF_EP3_S414.05-->
+                     <urn2:EstEnRapportPrev>?</urn2:EstEnRapportPrev>
+                     <!--Optional:EF_EP3_S414.06-->
+                     <urn2:EstNonRemb>?</urn2:EstNonRemb>
+                     <!--Optional:EF_EP3_S414.07-->
+                     <urn2:EstHN>?</urn2:EstHN>
+                  </urn2:LIGORTHOPTISTE>
+               </urn2:CONTENUPRESCRIPTION>
+            </urn2:PRESCRIPTION>
+            <!--Optional:EF_EP3_S105-->
+            <urn2:PRESCRIPTEUR>
+               <!--Optional:EF_EP3_S105.02 -->
+               <urn2:IdentifiantRPPS>?</urn2:IdentifiantRPPS>
+               <!--Optional:EF_EP3_S105.03 -->
+               <urn2:IdentifiantRPPSSecondaire>?</urn2:IdentifiantRPPSSecondaire>
+               <!--Optional: EF_EP3_S105.06 ?-->
+               <urn2:Specialite>?</urn2:Specialite>
+               <!--Optional:EF_EP3_S105.04-->
+               <urn2:Nom>?</urn2:Nom>
+               <!--Optional:EF_EP3_S105.05-->
+               <urn2:Prenom>?</urn2:Prenom>
+               <!--Optional:EF_EP3_S105.01-->
+               <urn2:Identifiant R="?">?</urn2:Identifiant>
+               <!--Optional:EF_EP3_S104-->
+               <urn2:STS>
+                  <!--Optional:EF_EP3_S104.01-->
+                  <urn2:Identifiant R="?">?</urn2:Identifiant>
+               </urn2:STS>
+            </urn2:PRESCRIPTEUR>
+            <!--Optional:EF_EP3_S404-->
+            <urn2:PATIENT>
+               <!--Optional:EF_EP3_S404.02-->
+               <urn2:Prenom>?</urn2:Prenom>
+               <!--Optional:EF_EP3_S404.03-->
+               <urn2:DateNai>?</urn2:DateNai>
+               <!--Optional:EF_EP3_S404.04-->
+               <urn2:Poids>?</urn2:Poids>
+               <!--Optional:EF_EP3_S404.05 -->
+               <urn2:Taille>?</urn2:Taille>
+            </urn2:PATIENT>
+            <!--Optional:EF_EP3_S415-->
+            <urn2:EXECUTANT>
+               <!--Optional:EF_EP3_S415.01-->
+               <urn2:Nom>?</urn2:Nom>
+            </urn2:EXECUTANT>
+         </urn1:INFOPRESCRIPTION>
+         <!--Zero or more repetitions:EF_EP3_S120-->
+         <urn1:INFOMODIFICATION>
+            <!--Zero or more repetitions:EF_EP3_S116-->
+            <urn3:MODIFICATION>
+               <!--Optional:EF_EP3_S116.01-->
+               <urn3:Date>?</urn3:Date>
+               <!--Zero or more repetitions:EF_EP3_S117-->
+               <urn3:LIGMODIFICATION>
+                  <!--Optional:EF_EP3_S117.01-->
+                  <urn3:CodeMotif>?</urn3:CodeMotif>
+                  <!--Optional:EF_EP3_S117.02-->
+                  <urn3:CodeSousMotif>?</urn3:CodeSousMotif>
+                  <!--Optional:EF_EP3_S117.03-->
+                  <urn3:AccordPrescripteur>?</urn3:AccordPrescripteur>
+                  <!--Optional:EF_EP3_S117.04-->
+                  <urn3:Note>?</urn3:Note>
+                  <!--Optional:EF_EP3_S115-->
+                  <urn3:LIGMEDICAMENTEUX>
+                     <!--Optional:EF_EP3_S115.01-->
+                     <urn3:Id>?</urn3:Id>
+                     <!--Optional:EF_EP3_S115.02-->
+                     <urn3:TypeEltPrescrit>?</urn3:TypeEltPrescrit>
+                     <!--Optional:EF_EP3_S115.10-->
+                     <urn3:NbreCond>?</urn3:NbreCond>
+                     <!--Optional:EF_EP3_S115.03-->
+                     <urn3:NbRenouv>?</urn3:NbRenouv>
+                     <!--Optional:EF_EP3_S115.04-->
+                     <urn3:CIP>?</urn3:CIP>
+                     <!--Optional:EF_EP3_S115.06-->
+                     <urn3:IDMVN>?</urn3:IDMVN>
+                     <!--Optional:EF_EP3_S115.07-->
+                     <urn3:Medicabase>?</urn3:Medicabase>
+                     <!--Optional:EF_EP3_S115.05 ou EF_EP3_S115.12-->
+                     <urn3:Molecules>?</urn3:Molecules>
+                     <!--Optional:EF_EP3_S115.08-->
+                     <urn3:DureeTraitement>?</urn3:DureeTraitement>
+                     <!--Optional:EF_EP3_S115.09-->
+                     <urn3:Posologie>?</urn3:Posologie>
+                     <!--Optional:EF_EP3_S115.11-->
+                     <urn3:CommentairePM>?</urn3:CommentairePM>
+                  </urn3:LIGMEDICAMENTEUX>
+                  <!--Optional:EF_EP3_S121-->
+                  <urn3:LIGDISPOSITIFMEDICAL>
+                     <!--Optional:EF_EP3_S121.01-->
+                     <urn3:Id>?</urn3:Id>
+                     <!--Optional:EF_EP3_S121.02-->
+                     <urn3:NbreCond>?</urn3:NbreCond>
+                     <!--Optional:EF_EP3_S121.03-->
+                     <urn3:DureeLocationLPP>?</urn3:DureeLocationLPP>
+                     <!--Optional:EF_EP3_S121.04-->
+                     <urn3:NbRenouv>?</urn3:NbRenouv>
+                     <!--Optional:EF_EP3_S121.05-->
+                     <urn3:CodeLPP>?</urn3:CodeLPP>
+                     <!--Optional:EF_EP3_S121.06-->
+                     <urn3:CodeACL>?</urn3:CodeACL>
+                     <!--Optional:EF_EP3_S121.10-->
+                     <urn3:CodeIndexACL7>?</urn3:CodeIndexACL7>
+                     <!--Optional:EF_EP3_S121.07-->
+                     <urn3:CodeREF13>?</urn3:CodeREF13>
+                     <!--Optional:EF_EP3_S121.08-->
+                     <urn3:CodeUDI>?</urn3:CodeUDI>
+                     <!--Optional:EF_EP3_S121.09-->
+                     <urn3:LibelleMarque>?</urn3:LibelleMarque>
+                  </urn3:LIGDISPOSITIFMEDICAL>
+                  <!--Optional:EF_EP3_S122-->
+                  <urn3:LIGKINE>
+                     <!--Optional:EF_EP3_S122.01-->
+                     <urn3:Id>?</urn3:Id>
+                     <!--Optional:EF_EP3_S122.02-->
+                     <urn3:DetailModification>?</urn3:DetailModification>
+                     <!--Optional:EF_EP3_S122.03-->
+                     <urn3:CommentairePS>?</urn3:CommentairePS>
+                  </urn3:LIGKINE>
+                  <!--Optional:EF_EP3_S123-->
+                  <urn3:LIGBIO>
+                     <!--Zero or more repetitions:Balise non utilisée-->
+                     <urn3:LOINCBIO>
+                        <!--Optional:Balise non utilisée-->
+                        <urn3:CodeNABM>?</urn3:CodeNABM>
+                        <!--Optional:Balise non utilisée-->
+                        <urn3:Chapitre>?</urn3:Chapitre>
+                        <!--Optional:Balise non utilisée-->
+                        <urn3:LibChapitre>?</urn3:LibChapitre>
+                        <!--Optional:Balise non utilisée-->
+                        <urn3:SousChapitre>?</urn3:SousChapitre>
+                        <!--Optional:Balise non utilisée-->
+                        <urn3:LibSousChap>?</urn3:LibSousChap>
+                        <!--Optional:Balise non utilisée-->
+                        <urn3:Rang>?</urn3:Rang>
+                        <!--Optional:Balise non utilisée-->
+                        <urn3:CodeLOINC>?</urn3:CodeLOINC>
+                        <!--Optional:Balise non utilisée-->
+                        <urn3:LibRef>?</urn3:LibRef>
+                        <!--Optional:Balise non utilisée-->
+                        <urn3:LibEdition>?</urn3:LibEdition>
+                        <!--Optional:Balise non utilisée-->
+                        <urn3:DateVal>?</urn3:DateVal>
+                        <!--Optional:Balise non utilisée-->
+                        <urn3:VersionVP>?</urn3:VersionVP>
+                        <!--Optional:Balise non utilisée-->
+                        <urn3:Statut>?</urn3:Statut>
+                     </urn3:LOINCBIO>
+                     <!--Optional:EF_EP3_S123.01-->
+                     <urn3:Id>?</urn3:Id>
+                     <!--Optional:EF_EP3_S123.02-->
+                     <urn3:NbRenouv>?</urn3:NbRenouv>
+                     <!--Optional:EF_EP3_S123.03-->
+                     <urn3:DetailModification>?</urn3:DetailModification>
+                     <!--Optional:EF_EP3_S123.04-->
+                     <urn3:Origine>?</urn3:Origine>
+                     <!--Optional:EF_EP3_S123.05-->
+                     <urn3:CommentairePS>?</urn3:CommentairePS>
+                  </urn3:LIGBIO>
+                  <!--Optional:EF_EP3_S124-->
+                  <urn3:LIGINFIRMIER>
+                     <!--Optional:EF_EP3_S124.01-->
+                     <urn3:Id>?</urn3:Id>
+                     <!--Optional:EF_EP3_S124.02-->
+                     <urn3:DetailModification>?</urn3:DetailModification>
+                     <!--Optional:EF_EP3_S124.03-->
+                     <urn3:CommentairePS>?</urn3:CommentairePS>
+                  </urn3:LIGINFIRMIER>
+                  <!--Optional:EF_EP3_S125-->
+                  <urn3:LIGPEDICURE>
+                     <!--Optional:EF_EP3_S125.01-->
+                     <urn3:Id>?</urn3:Id>
+                     <!--Optional:EF_EP3_S125.02-->
+                     <urn3:DetailModification>?</urn3:DetailModification>
+                     <!--Optional:EF_EP3_S125.03-->
+                     <urn3:CommentairePS>?</urn3:CommentairePS>
+                  </urn3:LIGPEDICURE>
+                  <!--Optional:EF_EP3_S126-->
+                  <urn3:LIGORTHOPHONISTE>
+                     <!--Optional:EF_EP3_S126.01-->
+                     <urn3:Id>?</urn3:Id>
+                     <!--Optional:EF_EP3_S126.02-->
+                     <urn3:DetailModification>?</urn3:DetailModification>
+                     <!--Optional:EF_EP3_S126.03-->
+                     <urn3:CommentairePS>?</urn3:CommentairePS>
+                  </urn3:LIGORTHOPHONISTE>
+                  <!--Optional:EF_EP3_S127-->
+                  <urn3:LIGORTHOPTISTE>
+                     <!--Optional:EF_EP3_S127.01-->
+                     <urn3:Id>?</urn3:Id>
+                     <!--Optional:EF_EP3_S127.02-->
+                     <urn3:DetailModification>?</urn3:DetailModification>
+                     <!--Optional:EF_EP3_S127.03-->
+                     <urn3:CommentairePS>?</urn3:CommentairePS>
+                  </urn3:LIGORTHOPTISTE>
+               </urn3:LIGMODIFICATION>
+            </urn3:MODIFICATION>
+            <!--Optional:EF_EP3_S150-->
+            <urn3:EXECUTANT>
+               <!--Optional:EF_EP3_S150.01-->
+               <urn3:IdentifiantRPPS>?</urn3:IdentifiantRPPS>
+               <!--Optional:EF_EP3_S150.02 ? -->
+               <urn3:IdentifiantRPPSSecondaire>?</urn3:IdentifiantRPPSSecondaire>
+               <!--Optional:EF_EP3_S150.03-->
+               <urn3:Specialite>?</urn3:Specialite>
+               <!--Optional:EF_EP3_S150.04-->
+               <urn3:Nom>?</urn3:Nom>
+               <!--Optional:EF_EP3_S150.05-->
+               <urn3:Prenom>?</urn3:Prenom>
+               <!--0 to 2 repetitions:EF_EP3_S151-->
+               <urn3:STS>
+                  <!--Optional:EF_EP3_S151.01-->
+                  <urn3:Identifiant R="?">?</urn3:Identifiant>
+               </urn3:STS>
+               <!--Optional:EF_EP3_S150.06-->
+               <urn3:Identifiant R="?">?</urn3:Identifiant>
+            </urn3:EXECUTANT>
+         </urn1:INFOMODIFICATION>
+         <!--Zero or more repetitions:EF_EP3_S101-->
+         <urn1:INFOEXECUTION>
+            <!--Optional:EF_EP3_S101.02-->
+            <urn4:VersionNorme>?</urn4:VersionNorme>
+            <!--Zero or more repetitions:EF_EP3_S103-->
+            <urn4:EXECUTION>
+               <!--Optional:EF_EP3_S103.02-->
+               <urn4:Date>?</urn4:Date>
+               <!--1 or more repetitions:EF_EP3_S112-->
+               <urn4:LIGEXECUTION>
+                  <!--Optional:EF_EP3_S112.01-->
+                  <urn4:Renouvellement>?</urn4:Renouvellement>
+                  <!--Optional:EF_EP3_S112.02-->
+                  <urn4:NbEltExec>?</urn4:NbEltExec>
+                  <!--Optional:EF_EP3_S112.03-->
+                  <urn4:Note>?</urn4:Note>
+                  <!--Optional:EF_EP3_S141-->
+                  <urn4:LIGMEDICAMENTEUX>
+                     <!--Optional:EF_EP3_S141.01-->
+                     <urn4:Id>?</urn4:Id>
+                     <!--Optional:EF_EP3_S141.02-->
+                     <urn4:TypeEltPrescrit>?</urn4:TypeEltPrescrit>
+                     <!--Optional:EF_EP3_S141.03-->
+                     <urn4:NbreCond>?</urn4:NbreCond>
+                     <!--Optional:EF_EP3_S141.04-->
+                     <urn4:QteUnite>?</urn4:QteUnite>
+                     <!--Optional:EF_EP3_S141.05-->
+                     <urn4:NbRenouv>?</urn4:NbRenouv>
+                     <!--Optional:EF_EP3_S141.06-->
+                     <urn4:CIP>?</urn4:CIP>
+                     <!--Optional:EF_EP3_S141.07-->
+                     <urn4:IDMVN>?</urn4:IDMVN>
+                     <!--Optional:EF_EP3_S141.08-->
+                     <urn4:Medicabase>?</urn4:Medicabase>
+                     <!--Optional:EF_EP3_S141.09-->
+                     <urn4:Molecules>?</urn4:Molecules>
+                     <!--Optional:EF_EP3_S141.10-->
+                     <urn4:DureeTraitement>?</urn4:DureeTraitement>
+                     <!--Optional:EF_EP3_S141.11-->
+                     <urn4:CommentairePM>?</urn4:CommentairePM>
+                  </urn4:LIGMEDICAMENTEUX>
+                  <!--Optional:EF_EP3_S142-->
+                  <urn4:LIGDISPOSITIFMEDICAL>
+                     <!--Optional:EF_EP3_S142.01-->
+                     <urn4:Id>?</urn4:Id>
+                     <!--Optional:EF_EP3_S142.02-->
+                     <urn4:NbreCond>?</urn4:NbreCond>
+                     <!--Optional:EF_EP3_S142.03-->
+                     <urn4:DureeLocationFacturee>?</urn4:DureeLocationFacturee>
+                     <!--Optional:EF_EP3_S142.04-->
+                     <urn4:NbRenouv>?</urn4:NbRenouv>
+                     <!--Optional:EF_EP3_S142.05-->
+                     <urn4:CodeLPP>?</urn4:CodeLPP>
+                     <!--Optional:EF_EP3_S142.06-->
+                     <urn4:CodeACL>?</urn4:CodeACL>
+                     <!--Optional:EF_EP3_S142.12-->
+                     <urn4:CodeIndexACL7>?</urn4:CodeIndexACL7>
+                     <!--Optional:EF_EP3_S142.07-->
+                     <urn4:CodeREF13>?</urn4:CodeREF13>
+                     <!--Optional:EF_EP3_S142.08-->
+                     <urn4:CodeUDI>?</urn4:CodeUDI>
+                     <!--Optional:EF_EP3_S142.09-->
+                     <urn4:LibelleMarque>?</urn4:LibelleMarque>
+                     <!--Optional:EF_EP3_S142.10-->
+                     <urn4:CodeAcquisition>?</urn4:CodeAcquisition>
+                     <!--Optional:EF_EP3_S142.11-->
+                     <urn4:DureeTraitement>?</urn4:DureeTraitement>
+                  </urn4:LIGDISPOSITIFMEDICAL>
+                  <!--Optional:EF_EP3_S143-->
+                  <urn4:LIGKINE>
+                     <!--Optional:EF_EP3_S143.01-->
+                     <urn4:Id>?</urn4:Id>
+                     <!--Optional:EF_EP3_S143.02-->
+                     <urn4:CodeDetailExecution>?</urn4:CodeDetailExecution>
+                     <!--Optional:EF_EP3_S143.03-->
+                     <urn4:DetailExecution>?</urn4:DetailExecution>
+                     <!--Optional:EF_EP3_S143.04-->
+                     <urn4:CommentairePS>?</urn4:CommentairePS>
+                  </urn4:LIGKINE>
+                  <!--Optional:EF_EP3_S144-->
+                  <urn4:LIGBIO>
+                     <!--Zero or more repetitions:Balise non utilisée-->
+                     <urn4:LOINCBIO>
+                        <!--Optional:Balise non utilisée-->
+                        <urn4:CodeNABM>?</urn4:CodeNABM>
+                        <!--Optional:Balise non utilisée-->
+                        <urn4:Chapitre>?</urn4:Chapitre>
+                        <!--Optional:Balise non utilisée-->
+                        <urn4:LibChapitre>?</urn4:LibChapitre>
+                        <!--Optional:Balise non utilisée-->
+                        <urn4:SousChapitre>?</urn4:SousChapitre>
+                        <!--Optional:Balise non utilisée-->
+                        <urn4:LibSousChap>?</urn4:LibSousChap>
+                        <!--Optional:Balise non utilisée-->
+                        <urn4:Rang>?</urn4:Rang>
+                        <!--Optional:Balise non utilisée-->
+                        <urn4:CodeLOINC>?</urn4:CodeLOINC>
+                        <!--Optional:Balise non utilisée-->
+                        <urn4:LibRef>?</urn4:LibRef>
+                        <!--Optional:Balise non utilisée-->
+                        <urn4:LibEdition>?</urn4:LibEdition>
+                        <!--Optional:Balise non utilisée-->
+                        <urn4:DateVal>?</urn4:DateVal>
+                        <!--Optional:Balise non utilisée-->
+                        <urn4:VersionVP>?</urn4:VersionVP>
+                        <!--Optional:Balise non utilisée-->
+                        <urn4:Statut>?</urn4:Statut>
+                     </urn4:LOINCBIO>
+                     <!--Optional:EF_EP3_S144.01-->
+                     <urn4:Id>?</urn4:Id>
+                     <!--Optional:EF_EP3_S144.02-->
+                     <urn4:NbRenouv>?</urn4:NbRenouv>
+                     <!--Optional:EF_EP3_S144.03-->
+                     <urn4:CodeDetailExecution>?</urn4:CodeDetailExecution>
+                     <!--Optional:EF_EP3_S144.04-->
+                     <urn4:DetailExecution>?</urn4:DetailExecution>
+                     <!--Optional:EF_EP3_S144.07-->
+                     <urn4:HeurePrelevement>?</urn4:HeurePrelevement>
+                     <!--Optional:EF_EP3_S144.05-->
+                     <urn4:CommentairePS>?</urn4:CommentairePS>
+                  </urn4:LIGBIO>
+                  <!--Optional:EF_EP3_S145-->
+                  <urn4:LIGINFIRMIER>
+                     <!--Optional:EF_EP3_S145.01-->
+                     <urn4:Id>?</urn4:Id>
+                     <!--Optional:EF_EP3_S145.02-->
+                     <urn4:CodeDetailExecution>?</urn4:CodeDetailExecution>
+                     <!--Optional:EF_EP3_S145.03-->
+                     <urn4:DetailExecution>?</urn4:DetailExecution>
+                     <!--Optional:EF_EP3_S145.06-->
+                     <urn4:EstBSI>?</urn4:EstBSI>
+                     <!--Optional:EF_EP3_S145.04-->
+                     <urn4:CommentairePS>?</urn4:CommentairePS>
+                  </urn4:LIGINFIRMIER>
+                  <!--Optional:EF_EP3_S146-->
+                  <urn4:LIGPEDICURE>
+                     <!--Optional:EF_EP3_S146.01-->
+                     <urn4:Id>?</urn4:Id>
+                     <!--Optional:EF_EP3_S146.02-->
+                     <urn4:CodeDetailExecution>?</urn4:CodeDetailExecution>
+                     <!--Optional:EF_EP3_S146.03-->
+                     <urn4:DetailExecution>?</urn4:DetailExecution>
+                     <!--Optional:EF_EP3_S146.04-->
+                     <urn4:CommentairePS>?</urn4:CommentairePS>
+                  </urn4:LIGPEDICURE>
+                  <!--Optional:EF_EP3_S147-->
+                  <urn4:LIGORTHOPHONISTE>
+                     <!--Optional:EF_EP3_S147.01-->
+                     <urn4:Id>?</urn4:Id>
+                     <!--Optional:EF_EP3_S147.02-->
+                     <urn4:CodeDetailExecution>?</urn4:CodeDetailExecution>
+                     <!--Optional:EF_EP3_S147.03-->
+                     <urn4:DetailExecution>?</urn4:DetailExecution>
+                     <!--Optional:EF_EP3_S147.04-->
+                     <urn4:CommentairePS>?</urn4:CommentairePS>
+                  </urn4:LIGORTHOPHONISTE>
+                  <!--Optional:EF_EP3_S148-->
+                  <urn4:LIGORTHOPTISTE>
+                     <!--Optional:EF_EP3_S148.01-->
+                     <urn4:Id>?</urn4:Id>
+                     <!--Optional:EF_EP3_S148.02-->
+                     <urn4:CodeDetailExecution>?</urn4:CodeDetailExecution>
+                     <!--Optional:EF_EP3_S148.03-->
+                     <urn4:DetailExecution>?</urn4:DetailExecution>
+                     <!--Optional:EF_EP3_S148.04-->
+                     <urn4:CommentairePS>?</urn4:CommentairePS>
+                  </urn4:LIGORTHOPTISTE>
+               </urn4:LIGEXECUTION>
+               <!--Optional:EF_EP3_S109-->
+               <urn4:FACTURE>
+                  <!--Optional:EF_EP3_S109.01-->
+                  <urn4:Numero>?</urn4:Numero>
+                  <!--Optional:EF_EP3_S111-->
+                  <urn4:FACTUREENVELOPPETECHNIQUE>
+                     <!--Optional:EF_EP3_S111.01-->
+                     <urn4:NumeroLot>?</urn4:NumeroLot>
+                     <!--Optional:EF_EP3_S111.03-->
+                     <urn4:DateCreationLot>?</urn4:DateCreationLot>
+                     <!--Optional:EF_EP3_S111.04-->
+                     <urn4:NombreFacture>?</urn4:NombreFacture>
+                  </urn4:FACTUREENVELOPPETECHNIQUE>
+               </urn4:FACTURE>
+            </urn4:EXECUTION>
+            <!--Optional:EF_EP3_S150-->
+            <urn4:EXECUTANT>
+               <!--Optional:EF_EP3_S150.01-->
+               <urn4:IdentifiantRPPS>?</urn4:IdentifiantRPPS>
+               <!--Optional:EF_EP3_S150.02-->
+               <urn4:IdentifiantRPPSSecondaire>?</urn4:IdentifiantRPPSSecondaire>
+               <!--Optional:EF_EP3_S150.03-->
+               <urn4:Specialite>?</urn4:Specialite>
+               <!--Optional:EF_EP3_S150.04-->
+               <urn4:Nom>?</urn4:Nom>
+               <!--Optional:EF_EP3_S150.05-->
+               <urn4:Prenom>?</urn4:Prenom>
+               <!--Optional:EF_EP3_S150.06-->
+               <urn4:Identifiant R="?">?</urn4:Identifiant>
+               <!--Optional:EF_EP3_S151-->
+               <urn4:STS>
+                  <!--Optional:EF_EP3_S151.01-->
+                  <urn4:Identifiant R="?">?</urn4:Identifiant>
+               </urn4:STS>
+            </urn4:EXECUTANT>
+            <!--Optional:EF_EP3_S160 et EF_EP3_S161-->
+            <urn4:PATIENT>
+               <!--Optional:EF_EP3_S170-->
+               <urn4:INS>
+                  <!--Optional:EF_EP3_S170.01-->
+                  <urn4:Matricule>?</urn4:Matricule>
+                  <!--Optional:EF_EP3_S170.02-->
+                  <urn4:OID>?</urn4:OID>
+                  <!--Optional:EF_EP3_S170.03-->
+                  <urn4:Nom>?</urn4:Nom>
+                  <!--Optional:EF_EP3_S170.04-->
+                  <urn4:Prenom>?</urn4:Prenom>
+                  <!--Optional:EF_EP3_S170.05-->
+                  <urn4:Sexe>?</urn4:Sexe>
+                  <!--Optional:EF_EP3_S170.06-->
+                  <urn4:DateNai>?</urn4:DateNai>
+                  <!--Optional:EF_EP3_S170.07-->
+                  <urn4:LieuNai>?</urn4:LieuNai>
+               </urn4:INS>
+               <!--Optional:Balise non utilisée-->
+               <urn4:NumINS>?</urn4:NumINS>
+               <!--Optional:EF_EP3_S161.01-->
+               <urn4:NumNIR>?</urn4:NumNIR>
+               <!--Optional:EF_EP3_S161.02-->
+               <urn4:CleNIR>?</urn4:CleNIR>
+               <!--Optional:EF_EP3_S161.03-->
+               <urn4:Rang>?</urn4:Rang>
+               <!--Optional:EF_EP3_S161.04-->
+               <urn4:NumNIROD>?</urn4:NumNIROD>
+               <!--Optional:EF_EP3_S161.05-->
+               <urn4:CleNIROD>?</urn4:CleNIROD>
+               <!--Optional:EF_EP3_S161.06-->
+               <urn4:Nom>?</urn4:Nom>
+               <!--Optional:EF_EP3_S160.07-->
+               <urn4:NomUsage>?</urn4:NomUsage>
+               <!--Optional:EF_EP3_S160.08-->
+               <urn4:Prenom>?</urn4:Prenom>
+               <!--Optional:EF_EP3_S160.09-->
+               <urn4:DateNai>?</urn4:DateNai>
+               <!--Optional:EF_EP3_S161.10-->
+               <urn4:GrandRegime>?</urn4:GrandRegime>
+               <!--Optional:EF_EP3_S161.11-->
+               <urn4:CodeOrganisme>?</urn4:CodeOrganisme>
+               <!--Optional:EF_EP3_S161.12-->
+               <urn4:CodeCentre>?</urn4:CodeCentre>
+            </urn4:PATIENT>
+         </urn1:INFOEXECUTION>
+         <!--Zero or more repetitions:EF_EP3_S399-->
+         <urn1:ERREUR>
+            <!--Optional:EF_EP3_S399.01-->
+            <urn1:Code>?</urn1:Code>
+            <!--Optional:EF_EP3_S399.02-->
+            <urn1:Severite>?</urn1:Severite>
+            <!--Optional:EF_EP3_S399.03-->
+            <urn1:Libelle>?</urn1:Libelle>
+         </urn1:ERREUR>
+      </urn:SE_ARCONSEPRESCR>
+   </soap:Body>
+</soap:Envelope>
