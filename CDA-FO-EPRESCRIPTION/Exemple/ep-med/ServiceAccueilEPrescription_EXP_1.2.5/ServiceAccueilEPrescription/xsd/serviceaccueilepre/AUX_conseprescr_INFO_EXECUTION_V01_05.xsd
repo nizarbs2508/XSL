@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:e_prescr_inf_exec="urn:ir:e_prescr_inf_exec"
+	xmlns:e_prescr_common_types="urn:ir:e_prescr_common_types"
+    attributeFormDefault="unqualified" 
+    elementFormDefault="qualified" 
+    targetNamespace="urn:ir:e_prescr_inf_exec"
+    >
+    
+    <xsd:annotation>
+        <xsd:appinfo>
+            <Build xmlns="urn:camelia:info" Generation="3" Host="P107501A239573S" Location="D:/IBM/rationalsdp7.0.5/workspace" Model="CONTENUPRESCRIPTION" Project="P2" Repository="X:\SRVDAIT\Patrimoine" Root="false" Time="20180424_130320" />
+            <Package xmlns="urn:camelia:info" Status="Approved" Timestamp="20180424_130321" Version="01.00" />
+        </xsd:appinfo>
+    </xsd:annotation>  
+	
+	
+	<xsd:import namespace="urn:ir:e_prescr_common_types" schemaLocation="AUX_e_prescr_COMMON_TYPES_V01_00.xsd"/>
+	
+    
+    <xsd:complexType name="INFOEXECUTION_SE_ARCONSEPRESCR_INF_EXEC">
+        <xsd:sequence>
+        	
+        	<xsd:element name="VersionNorme" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="EXECUTION" type="e_prescr_inf_exec:EXECUTION_SE_ARCONSEPRESCR_INF_EXEC" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+            <xsd:element name="EXECUTANT" type="e_prescr_inf_exec:EXECUTANT_SE_ARCONSEPRESCR_INF_EXEC" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="PATIENT" type="e_prescr_inf_exec:PATIENT_SE_ARCONSEPRESCR_INF_EXEC" maxOccurs="1" minOccurs="0"></xsd:element>
+        	
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    
+    <xsd:complexType name="EXECUTION_SE_ARCONSEPRESCR_INF_EXEC">
+        <xsd:sequence>
+        	  <xsd:element name="Date" type="xsd:dateTime"
+                maxOccurs="1" minOccurs="0">
+            </xsd:element>
+            
+            <xsd:element name="LIGEXECUTION"
+                type="e_prescr_inf_exec:LIGEXECUTION" maxOccurs="unbounded"
+                minOccurs="1">
+            </xsd:element>
+            <xsd:element name="FACTURE" type="e_prescr_inf_exec:FACTURE_SE_ARCONSEPRESCR_INF_EXEC"
+                maxOccurs="1" minOccurs="0">
+            </xsd:element>
+          
+            
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="LIGEXECUTION">
+        <xsd:sequence>
+        	<xsd:element name="Renouvellement" type="xsd:boolean" maxOccurs="1" minOccurs="0"></xsd:element>
+        	 <xsd:element name="NbEltExec"
+                type="xsd:string" maxOccurs="1" minOccurs="0">
+            </xsd:element>
+            <xsd:element name="Note"
+                type="xsd:string" maxOccurs="1" minOccurs="0">
+            </xsd:element>
+            
+            <xsd:element name="LIGMEDICAMENTEUX" type="e_prescr_inf_exec:LIGMEDICAMENTEUX_SE_ARCONSEPRESCR_INF_EXEC" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="LIGDISPOSITIFMEDICAL" type="e_prescr_inf_exec:LIGDISPOSITIFMEDICAL_SE_ARCONSEPRESCR_INF_EXEC" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="LIGKINE" type="e_prescr_inf_exec:LIGKINE_SE_ARCONSEPRESCR_INF_EXEC" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="LIGBIO" type="e_prescr_inf_exec:LIGBIO_SE_ARCONSEPRESCR_INF_EXEC" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="LIGINFIRMIER" type="e_prescr_inf_exec:LIGINFIRMIER_SE_ARCONSEPRESCR_INF_EXEC" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="LIGPEDICURE" type="e_prescr_inf_exec:LIGPEDICURE_SE_ARCONSEPRESCR_INF_EXEC" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="LIGORTHOPHONISTE" type="e_prescr_inf_exec:LIGORTHOPHONISTE_SE_ARCONSEPRESCR_INF_EXEC" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="LIGORTHOPTISTE" type="e_prescr_inf_exec:LIGORTHOPTISTE_SE_ARCONSEPRESCR_INF_EXEC" maxOccurs="1" minOccurs="0"></xsd:element>
+            
+           
+            
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    
+    <xsd:complexType name="FACTURE_SE_ARCONSEPRESCR_INF_EXEC">
+        <xsd:sequence>
+       	 	<xsd:element name="Numero" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="FACTUREENVELOPPETECHNIQUE" type="e_prescr_inf_exec:FACTUREENVELOPPETECHNIQUE_SE_ARCONSEPRESCR_INF_EXEC" maxOccurs="1" minOccurs="0"></xsd:element>
+            
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="FACTUREENVELOPPETECHNIQUE_SE_ARCONSEPRESCR_INF_EXEC">
+        <xsd:sequence>
+            <xsd:element name="NumeroLot" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="DateCreationLot" type="xsd:date" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="NombreFacture" type="xsd:integer" maxOccurs="1" minOccurs="0"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="PATIENT_SE_ARCONSEPRESCR_INF_EXEC">
+        <xsd:sequence>
+            <xsd:element name="INS" type="e_prescr_inf_exec:PATIENT_SE_ARCONSEPRESCR_INF_EXEC_INS" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="NumINS" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="NumNIR" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="CleNIR" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="Rang" type="xsd:integer" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="NumNIROD" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="CleNIROD" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="Nom" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="NomUsage" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="Prenom" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="DateNai" type="e_prescr_common_types:DateLunaire" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="GrandRegime"
+                type="xsd:string" maxOccurs="1" minOccurs="0">
+            </xsd:element>
+            <xsd:element name="CodeOrganisme"
+                type="xsd:string" maxOccurs="1" minOccurs="0">
+            </xsd:element>
+            <xsd:element name="CodeCentre" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="PATIENT_SE_ARCONSEPRESCR_INF_EXEC_INS">
+        <xsd:sequence>
+            <xsd:element name="Matricule" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="OID" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="Nom" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="Prenom" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="Sexe" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="DateNai" type="e_prescr_common_types:DateLunaire" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="LieuNai" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="EXECUTANT_SE_ARCONSEPRESCR_INF_EXEC">
+        <xsd:sequence>
+
+            <xsd:element name="IdentifiantRPPS" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="IdentifiantRPPSSecondaire" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="Specialite" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="Nom" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="Prenom" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+            
+            <xsd:element maxOccurs="1" 
+          				minOccurs="0" name="Identifiant" 
+          				type="e_prescr_inf_exec:IdentiteString_EXECUTANT_SE_ARCONSEPRESCR_INF_EXEC">
+         	</xsd:element>
+            <xsd:element name="STS" type="e_prescr_inf_exec:Sts_SE_ARCONSEPRESCR_INF_EXEC" maxOccurs="1" minOccurs="0"></xsd:element>
+            
+        </xsd:sequence>
+    </xsd:complexType>
+    
+     <xsd:complexType name="IdentiteString_EXECUTANT_SE_ARCONSEPRESCR_INF_EXEC">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="R" type="xsd:string" />
+			</xsd:extension>
+		</xsd:simpleContent>
+	 </xsd:complexType>
+    
+    
+    <xsd:complexType name="Sts_SE_ARCONSEPRESCR_INF_EXEC">
+        <xsd:sequence>
+        	 <xsd:element maxOccurs="1" 
+          				minOccurs="0" name="Identifiant" 
+          				type="e_prescr_inf_exec:IdentiteString_STS_SE_ARCONSEPRESCR_INF_EXEC">
+         </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="IdentiteString_STS_SE_ARCONSEPRESCR_INF_EXEC">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="R" type="xsd:string" />
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+    
+    
+    
+    <xsd:complexType name="LIGORTHOPTISTE_SE_ARCONSEPRESCR_INF_EXEC">
+		<xsd:sequence>
+		    <xsd:element name="Id" type="xsd:integer" maxOccurs="1"
+		        minOccurs="0">
+		    </xsd:element>
+		    
+		    <xsd:element name="CodeDetailExecution" type="xsd:string"
+		        maxOccurs="1" minOccurs="0"></xsd:element>
+		    <xsd:element name="DetailExecution" type="xsd:string"
+		        maxOccurs="1" minOccurs="0">
+		    </xsd:element>
+		    
+		    <xsd:element name="CommentairePS" type="xsd:string"
+		        maxOccurs="1" minOccurs="0">
+		    </xsd:element>
+		    
+
+		</xsd:sequence>
+	</xsd:complexType>
+
+    <xsd:complexType name="LIGORTHOPHONISTE_SE_ARCONSEPRESCR_INF_EXEC">
+		<xsd:sequence>
+		    <xsd:element name="Id" type="xsd:integer" maxOccurs="1"
+		        minOccurs="0">
+		    </xsd:element>
+		    
+		    <xsd:element name="CodeDetailExecution" type="xsd:string"
+		        maxOccurs="1" minOccurs="0"></xsd:element>
+		    <xsd:element name="DetailExecution" type="xsd:string"
+		        maxOccurs="1" minOccurs="0">
+		    </xsd:element>
+		    
+		    <xsd:element name="CommentairePS" type="xsd:string"
+		        maxOccurs="1" minOccurs="0">
+		    </xsd:element>
+		    
+		</xsd:sequence>
+	</xsd:complexType>
+
+    <xsd:complexType name="LIGPEDICURE_SE_ARCONSEPRESCR_INF_EXEC">
+		<xsd:sequence>
+		    <xsd:element name="Id" type="xsd:integer" maxOccurs="1"
+		        minOccurs="0">
+		    </xsd:element>
+		    
+		    <xsd:element name="CodeDetailExecution" type="xsd:string"
+		        maxOccurs="1" minOccurs="0"></xsd:element>
+		    <xsd:element name="DetailExecution" type="xsd:string"
+		        maxOccurs="1" minOccurs="0">
+		    </xsd:element>
+		    
+		    <xsd:element name="CommentairePS" type="xsd:string"
+		        maxOccurs="1" minOccurs="0">
+		    </xsd:element>
+		    
+		</xsd:sequence>
+	</xsd:complexType>
+
+	
+
+    <xsd:complexType name="LIGINFIRMIER_SE_ARCONSEPRESCR_INF_EXEC">
+		<xsd:sequence>
+		    <xsd:element name="Id" type="xsd:integer" maxOccurs="1"
+		        minOccurs="0">
+		    </xsd:element>
+		    
+		    <xsd:element name="CodeDetailExecution" type="xsd:string"
+		        maxOccurs="1" minOccurs="0">
+		    </xsd:element>
+		    <xsd:element name="DetailExecution" type="xsd:string"
+		        maxOccurs="1" minOccurs="0">
+		    </xsd:element>
+		    <xsd:element name="EstBSI" type="xsd:boolean"
+                maxOccurs="1" minOccurs="0">
+            </xsd:element>
+		    <xsd:element name="CommentairePS" type="xsd:string"
+		        maxOccurs="1" minOccurs="0">
+		    </xsd:element>
+		    
+		</xsd:sequence>
+	</xsd:complexType>
+
+    <xsd:complexType name="LIGBIO_SE_ARCONSEPRESCR_INF_EXEC">
+		<xsd:sequence>
+		
+		    <xsd:element name="LOINCBIO" type="e_prescr_inf_exec:LIGBIO_SE_ARCONSEPRESCR_INF_EXEC_LOINCBIO" 
+                maxOccurs="unbounded" minOccurs="0">
+            </xsd:element>
+			<xsd:element name="Id" type="xsd:integer" maxOccurs="1"
+				minOccurs="0">
+			</xsd:element>
+			
+			<xsd:element name="NbRenouv" type="xsd:integer"
+				maxOccurs="1" minOccurs="0">
+			</xsd:element>
+			
+			<xsd:element name="CodeDetailExecution" type="xsd:string"
+				maxOccurs="1" minOccurs="0"></xsd:element>
+			<xsd:element name="DetailExecution" type="xsd:string"
+				maxOccurs="1" minOccurs="0">
+			</xsd:element>
+		<xsd:element name="HeurePrelevement" type="xsd:dateTime"
+                maxOccurs="1" minOccurs="0">
+            </xsd:element>
+			<xsd:element name="CommentairePS" type="xsd:string"
+				maxOccurs="1" minOccurs="0">
+			</xsd:element>
+
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="LIGBIO_SE_ARCONSEPRESCR_INF_EXEC_LOINCBIO">
+        <xsd:sequence>
+
+            <xsd:element name="CodeNABM" type="xsd:string"
+                maxOccurs="1" minOccurs="0">
+            </xsd:element>
+            <xsd:element name="Chapitre" type="xsd:string"
+                maxOccurs="1" minOccurs="0">
+            </xsd:element>
+            <xsd:element name="LibChapitre" type="xsd:string"
+                maxOccurs="1" minOccurs="0">
+            </xsd:element>
+            <xsd:element name="SousChapitre" type="xsd:string"
+                maxOccurs="1" minOccurs="0">
+            </xsd:element>
+            <xsd:element name="LibSousChap" type="xsd:string"
+                maxOccurs="1" minOccurs="0">
+            </xsd:element>
+            <xsd:element name="Rang" type="xsd:string"
+                maxOccurs="1" minOccurs="0">
+            </xsd:element>
+            <xsd:element name="CodeLOINC" type="xsd:string"
+                maxOccurs="1" minOccurs="0">
+            </xsd:element>
+            <xsd:element name="LibRef" type="xsd:string"
+                maxOccurs="1" minOccurs="0">
+            </xsd:element>
+            <xsd:element name="LibEdition" type="xsd:string"
+                maxOccurs="1" minOccurs="0">
+            </xsd:element>
+            <xsd:element name="DateVal" type="xsd:dateTime"
+                maxOccurs="1" minOccurs="0">
+            </xsd:element>
+            <xsd:element name="VersionVP" type="xsd:string"
+                maxOccurs="1" minOccurs="0">
+            </xsd:element>
+            <xsd:element name="Statut" type="xsd:string"
+                maxOccurs="1" minOccurs="0">
+            </xsd:element>
+            
+            </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="LIGKINE_SE_ARCONSEPRESCR_INF_EXEC">
+		<xsd:sequence>
+			<xsd:element name="Id" type="xsd:integer" maxOccurs="1"
+				minOccurs="0">
+			</xsd:element>
+			
+			<xsd:element name="CodeDetailExecution" type="xsd:string"
+				maxOccurs="1" minOccurs="0"></xsd:element>
+				
+			<xsd:element name="DetailExecution" type="xsd:string"
+				maxOccurs="1" minOccurs="0">
+			</xsd:element>
+			
+			<xsd:element name="CommentairePS" type="xsd:string"
+				maxOccurs="1" minOccurs="0">
+			</xsd:element>
+			
+		</xsd:sequence>
+	</xsd:complexType>
+
+    <xsd:complexType name="LIGMEDICAMENTEUX_SE_ARCONSEPRESCR_INF_EXEC">
+		<xsd:sequence>
+			<xsd:element name="Id" type="xsd:integer" maxOccurs="1"
+				minOccurs="0">
+			</xsd:element>
+			
+			<xsd:element name="TypeEltPrescrit" type="xsd:integer"
+				maxOccurs="1" minOccurs="0">
+			</xsd:element>
+		    <xsd:element name="NbreCond" type="xsd:integer"
+				maxOccurs="1" minOccurs="0">
+			</xsd:element>
+		    <!-- iciiii -->
+			<xsd:element name="QteUnite" type="xsd:integer"
+				maxOccurs="1" minOccurs="0">
+			</xsd:element>
+			<xsd:element name="NbRenouv" type="xsd:integer"
+				maxOccurs="1" minOccurs="0">
+			</xsd:element>
+			
+			<xsd:element name="CIP" type="xsd:string"
+				maxOccurs="1" minOccurs="0">
+			</xsd:element>
+			
+			<xsd:element name="IDMVN" type="xsd:string" maxOccurs="1"
+				minOccurs="0">
+			</xsd:element>
+			<xsd:element name="Medicabase" type="xsd:string"
+				maxOccurs="1" minOccurs="0">
+			</xsd:element>
+		    
+			<xsd:element name="Molecules" type="xsd:string"
+				maxOccurs="1" minOccurs="0">
+			</xsd:element>
+			
+			<xsd:element name="DureeTraitement" type="xsd:integer"
+				maxOccurs="1" minOccurs="0">
+			</xsd:element>
+			
+		    <xsd:element name="CommentairePM" type="xsd:string"
+				maxOccurs="1" minOccurs="0">
+		    </xsd:element>
+			
+		</xsd:sequence>
+	</xsd:complexType>
+
+    <xsd:complexType name="LIGDISPOSITIFMEDICAL_SE_ARCONSEPRESCR_INF_EXEC">
+		<xsd:sequence>
+			<xsd:element name="Id" type="xsd:integer" maxOccurs="1"
+				minOccurs="0">
+			</xsd:element>
+			
+		    <xsd:element name="NbreCond" type="xsd:integer"
+				maxOccurs="1" minOccurs="0">
+			</xsd:element>
+			
+			<xsd:element name="DureeLocationFacturee"
+				type="xsd:integer" maxOccurs="1" minOccurs="0">
+			</xsd:element>
+			<xsd:element name="NbRenouv" type="xsd:integer"
+				maxOccurs="1" minOccurs="0">
+			</xsd:element>
+			
+			<xsd:element name="CodeLPP" type="xsd:string"
+				maxOccurs="1" minOccurs="0">
+			</xsd:element>
+			<xsd:element name="CodeACL" type="xsd:string"
+				maxOccurs="1" minOccurs="0">
+			</xsd:element>
+			<xsd:element name="CodeIndexACL7" type="xsd:string"
+                maxOccurs="1" minOccurs="0">
+            </xsd:element>
+			<xsd:element name="CodeREF13" type="xsd:string"
+				maxOccurs="1" minOccurs="0">
+			</xsd:element>
+			<xsd:element name="CodeUDI" type="xsd:string"
+				maxOccurs="1" minOccurs="0">
+			</xsd:element>
+			
+			<xsd:element name="LibelleMarque" type="xsd:string"
+				maxOccurs="1" minOccurs="0">
+			</xsd:element>
+			<xsd:element name="CodeAcquisition" type="xsd:string"
+				maxOccurs="1" minOccurs="0">
+			</xsd:element>
+			<xsd:element name="DureeTraitement" type="xsd:integer"
+				maxOccurs="1" minOccurs="0">
+			</xsd:element>
+			
+			
+		</xsd:sequence>
+	</xsd:complexType>
+    
+    
+</xsd:schema>

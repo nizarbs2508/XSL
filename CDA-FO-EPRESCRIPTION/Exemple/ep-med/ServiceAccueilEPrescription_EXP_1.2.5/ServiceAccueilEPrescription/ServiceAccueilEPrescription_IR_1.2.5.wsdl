@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+	xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+	xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tns="http://www.cnamts.fr/webservice"
+	xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+	xmlns:wsaw="http://www.w3.org/2006/02/addressing/wsdl" 
+    targetNamespace="http://www.cnamts.fr/webservice"
+	xmlns:ns="urn:siram:prescription" 
+
+	xmlns:se_creerepresc="urn:ir:se_creerepresc"
+    xmlns:se_arcreerepresc="urn:ir:se_ar_creereprescr"
+    xmlns:se_execeprescr="urn:ir:se_execeprescr"
+    xmlns:se_ar_execeprescr="urn:ir:se_ar_execeprescr"
+    xmlns:se_conseprescr="urn:ir:se_conseprescr"
+    xmlns:se_ar_conseprescr="urn:ir:se_ar_conseprescr"
+    xmlns:se_ar_recheprescr="urn:ir:se_ar_recheprescr"
+    xmlns:se_recheprescr="urn:ir:se_recheprescr">
+
+	<wsdl:types>
+		<xs:schema targetNamespace="http://www.cnamts.fr/webservice">
+			
+			<xs:import namespace="urn:ir:se_ar_creereprescr"
+                schemaLocation="xsd/serviceaccueilepre/ROOT_se_arcreerepresc_SE_ARCREEREPRESCR_V01_00.xsd" />
+            <xs:import namespace="urn:ir:se_creerepresc"
+                schemaLocation="xsd/serviceaccueilepre/ROOT_se_creerepresc_SE_CREEREPRESCR_V01_04.xsd" />
+		    
+		    <xs:import namespace="urn:ir:se_ar_execeprescr"
+		        schemaLocation="xsd/serviceaccueilepre/ROOT_se_arexecepresc_SE_AREXECEPRESCR_V01_02.xsd" />
+		    <xs:import namespace="urn:ir:se_execeprescr"
+		        schemaLocation="xsd/serviceaccueilepre/ROOT_se_execepresc_SE_EXECEPRESCR_V01_05.xsd" />
+		    <xs:import namespace="urn:ir:se_conseprescr"
+		        schemaLocation="xsd/serviceaccueilepre/ROOT_se_conseprescr_SE_CONSEPRESCR_V01_00.xsd" />
+		    <xs:import namespace="urn:ir:se_ar_conseprescr"
+		        schemaLocation="xsd/serviceaccueilepre/ROOT_se_arconsepresc_SE_ARCONSEPRESCR_V01_05.xsd" />
+		    
+		    <xs:import namespace="urn:ir:se_recheprescr"
+		        schemaLocation="xsd/serviceaccueilepre/ROOT_se_recheprescr_SE_RECHEPRESCR_V01_02.xsd" />
+		    <xs:import namespace="urn:ir:se_ar_recheprescr"
+		        schemaLocation="xsd/serviceaccueilepre/ROOT_se_arrecheprescr_SE_ARRECHEPRESCR_V01_02.xsd" />
+		</xs:schema>
+	</wsdl:types>
+
+	<wsdl:message name="consulterEPrescriptionRequest">
+        <wsdl:part name="parameters" element="se_conseprescr:SE_CONSEPRESCR"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="consulterEPrescriptionResponse">
+        <wsdl:part name="parameters" element="se_ar_conseprescr:SE_ARCONSEPRESCR"></wsdl:part>
+    </wsdl:message>
+
+    <wsdl:message name="executerEPrescriptionRequest">
+        <wsdl:part name="parameters" element="se_execeprescr:SE_EXECEPRESCR"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="executerEPrescriptionResponse">
+        <wsdl:part name="parameters" element="se_ar_execeprescr:SE_AREXECEPRESCR"></wsdl:part>
+    </wsdl:message>
+
+    <wsdl:message name="creerEPrescriptionRequest">
+		    <wsdl:part name="parameters"
+            element="se_creerepresc:SE_CREEREPRESCR"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="creerEPrescriptionResponse">
+        <wsdl:part name="parameters"
+            element="se_arcreerepresc:SE_ARCREEREPRESCR"></wsdl:part>
+    </wsdl:message>
+    
+    <wsdl:message name="rechercherEPrescriptionRequest">
+        <wsdl:part name="parameters" element="se_recheprescr:SE_RECHEPRESCR"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="rechercherEPrescriptionResponse">
+        <wsdl:part name="parameters" element="se_ar_recheprescr:SE_ARRECHEPRESCR"></wsdl:part>
+    </wsdl:message>
+
+    
+	<wsdl:portType name="ServiceAccueilEPrescriptionPortType">
+		
+		<wsdl:operation name="creerEPrescription">
+            <wsdl:input message="tns:creerEPrescriptionRequest"  wsaw:Action="urn:serviceaccueileprescription:1.2.1:creerEPrescription" />
+            <wsdl:output message="tns:creerEPrescriptionResponse" wsaw:Action="urn:serviceaccueileprescription:1.2.1:creerEPrescription" />
+        </wsdl:operation>
+	    
+	    <wsdl:operation name="executerEPrescription">
+	        <wsdl:input message="tns:executerEPrescriptionRequest"  wsaw:Action="urn:serviceaccueileprescription:1.2.1:executerEPrescription" />
+	        <wsdl:output message="tns:executerEPrescriptionResponse" wsaw:Action="urn:serviceaccueileprescription:1.2.1:executerEPrescription" />
+	    </wsdl:operation>
+	    
+	    <wsdl:operation name="consulterEPrescription">
+	        <wsdl:input message="tns:consulterEPrescriptionRequest"  wsaw:Action="urn:serviceaccueileprescription:1.2.1:consulterEPrescription" />
+	        <wsdl:output message="tns:consulterEPrescriptionResponse"  wsaw:Action="urn:serviceaccueileprescription:1.2.1:consulterEPrescription" />
+	    </wsdl:operation>
+	    
+	    <wsdl:operation name="rechercherEPrescription">
+	        <wsdl:input message="tns:rechercherEPrescriptionRequest" wsaw:Action="urn:serviceaccueileprescription:1.2.1:rechercherEPrescription" />
+	        <wsdl:output message="tns:rechercherEPrescriptionResponse" wsaw:Action="urn:serviceaccueileprescription:1.2.1:rechercherEPrescription" />
+	    </wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="ServiceAccueilEPrescriptionBinding" type="tns:ServiceAccueilEPrescriptionPortType">
+		<soap12:binding style="document" transport="http://www.w3.org/2003/05/soap/bindings/HTTP/" />
+		<wsaw:UsingAddressing required="true" />
+		
+		<wsdl:operation name="creerEPrescription">
+            <soap12:operation
+                soapAction="urn:serviceaccueileprescription:1.2.1:creerEPrescription" />
+            <wsdl:input>
+                <soap12:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+	    <wsdl:operation name="executerEPrescription">
+	        <soap12:operation
+	            soapAction="urn:serviceaccueileprescription:1.2.1:executerEPrescription" />
+	        <wsdl:input>
+	            <soap12:body use="literal" />
+	        </wsdl:input>
+	        <wsdl:output>
+	            <soap12:body use="literal" />
+	        </wsdl:output>
+	    </wsdl:operation>
+	    
+	    <wsdl:operation name="consulterEPrescription">
+	        <soap12:operation
+	            soapAction="urn:serviceaccueileprescription:1.2.1:consulterEPrescription" />
+	        <wsdl:input>
+	            <soap12:body use="literal" />
+	        </wsdl:input>
+	        <wsdl:output>
+	            <soap12:body use="literal" />
+	        </wsdl:output>
+	    </wsdl:operation>
+	    
+	    <wsdl:operation name="rechercherEPrescription">
+	        <soap12:operation
+	            soapAction="urn:serviceaccueileprescription:1.2.1:rechercherEPrescription" />
+	        <wsdl:input>
+	            <soap12:body use="literal" />
+	        </wsdl:input>
+	        <wsdl:output>
+	            <soap12:body use="literal" />
+	        </wsdl:output>
+	    </wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="ServiceAccueilEPrescription">
+		<wsdl:port name="ServiceAccueilEPrescriptionPortType" binding="tns:ServiceAccueilEPrescriptionBinding">
+			<soap12:address location="http://localhost:7001/MetierQZws/ServiceAccueilEPrescription" />
+		</wsdl:port>
+	</wsdl:service>
+	
+</wsdl:definitions>

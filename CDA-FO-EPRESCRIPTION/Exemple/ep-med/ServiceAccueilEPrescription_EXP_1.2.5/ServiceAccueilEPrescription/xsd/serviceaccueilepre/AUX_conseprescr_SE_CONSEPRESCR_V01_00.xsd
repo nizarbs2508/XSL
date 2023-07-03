@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:conseprescr="urn:ir:conseprescr" 
+    attributeFormDefault="unqualified" 
+    elementFormDefault="qualified" 
+    targetNamespace="urn:ir:conseprescr">
+    
+    
+    <xsd:complexType name="SE_CONSEPRESCR_SE_CONSEPRESCR">
+        <xsd:sequence>
+         	<xsd:element name="VersionNorme" type="xsd:string"
+                maxOccurs="1" minOccurs="0">
+            </xsd:element>
+            <xsd:element name="PRESCRIPTION" type="conseprescr:PRESCRIPTION_SE_CONSEPRESCR" maxOccurs="1" minOccurs="0"></xsd:element>
+            <xsd:element name="ACTEURDESANTE" type="conseprescr:ACTEURDESANTE_SE_CONSEPRESCR" maxOccurs="1" minOccurs="0"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="PRESCRIPTION_SE_CONSEPRESCR">
+        <xsd:sequence>
+            
+            <xsd:element name="Numero" type="xsd:string"
+                maxOccurs="1" minOccurs="0">
+            </xsd:element>
+            
+        </xsd:sequence>
+    </xsd:complexType>
+    
+     <xsd:complexType name="IdentiteString_SE_CONSEPRESCR">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="R" type="xsd:string" />
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+    
+    
+    <xsd:complexType name="ACTEURDESANTE_SE_CONSEPRESCR">
+        <xsd:sequence>
+        	<xsd:element maxOccurs="2" 
+          				minOccurs="0" name="Identifiant" 
+          				type="conseprescr:IdentiteString_SE_CONSEPRESCR">
+        	</xsd:element>
+        	
+            <xsd:element name="IdentifiantRPPS" type="xsd:string" maxOccurs="1" minOccurs="0"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+</xsd:schema>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:e_prescr_common_types="urn:ir:e_prescr_common_types" 
+    attributeFormDefault="unqualified" elementFormDefault="qualified" 
+    targetNamespace="urn:ir:e_prescr_common_types">
+    
+    <xsd:annotation>
+        <xsd:appinfo>
+            <Build xmlns="urn:camelia:info" Generation="3" Host="P107501A239573S" Location="D:/IBM/rationalsdp7.0.5/workspace" Model="EXECEPRESCR" Project="P2" Repository="X:\SRVDAIT\Patrimoine" Root="false" Time="20180424_130320" />
+            <Package xmlns="urn:camelia:info" Status="Approved" Timestamp="20180424_130321" Version="01.00" />
+        </xsd:appinfo>
+    </xsd:annotation> 
+    
+    
+    <!-- DATE LUNAIRE TYPE -->
+
+	<xsd:simpleType name="DateLunaire">
+		<xsd:restriction base="e_prescr_common_types:PATTERN0_DateLunaire"/>
+	</xsd:simpleType>
+
+	<!-- DATE LUNAIRE PATTERN -->
+
+	<xsd:simpleType name="PATTERN0_DateLunaire">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="\d{4}-\d{2}-\d{2}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+    
+</xsd:schema>
